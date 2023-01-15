@@ -6,18 +6,13 @@ import os
 os.system('cls')
 
 def Power(a, b):
-    i = 0
-    power = 1
-    if b >= 0:
-        while i < b:
-            power = a * Power(a, i)
-            i = i + 1
-    if b < 0:
-        while i < (-1) * b:
-            power = 1 / (a * Power(a, i))
-            i = i + 1
-    return power
-
+    if b == 0: 
+        return 1
+    elif b > 0:
+        return a * Power(a, b - 1)
+    else:
+        return 1/(a * Power(a, (-1) * (b + 1)))
+  
 A = float(input("Введите число A: "))
 B = int(input("Введите число B: "))
 print(f'Число {A} в степени {B} равно {Power(A, B)}')
