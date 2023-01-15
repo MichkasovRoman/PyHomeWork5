@@ -15,7 +15,7 @@ def Power(a, b):
   
 A = float(input("Введите число A: "))
 B = int(input("Введите число B: "))
-if A == 0 and B == 0:
+if A == 0 and B <= 0:
     print('Недопустимый формат ввода чисел.')
 else:
     print(f'Число {A} в степени {B} равно {Power(A, B)}')
